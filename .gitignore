@@ -46,3 +46,10 @@ CTestTestfile.cmake
 
 ### vim
 *.swp
+
+### gtest
+googletest-build/
+googletest-download/
+googletest-src/
+
+

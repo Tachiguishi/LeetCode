@@ -1,7 +1,12 @@
-#include "solution.h"
+#include <solution.h>
+#include <gtest/gtest.h>
 
-int main(){
-	Solution solution;
-	return 0;
+TEST(FooTest, Test1) {
+    EXPECT_EQ(1, 1);
+    EXPECT_TRUE(3 > 0);
 }
 
+int main(int argc, char **argv) {
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}

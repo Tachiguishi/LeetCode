@@ -1,4 +1,4 @@
-#include "solution.h"
+#include <solution.h>
 
 int Solution::maximumGap(vector<int>& nums){
 	if(nums.size() < 2){
