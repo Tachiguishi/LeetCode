@@ -32,7 +32,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 	include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
-project (leetcode)
+project (leetcode_solution)
 
 # header files
 include_directories(./include)
@@ -41,13 +41,12 @@ include_directories(./include)
 add_subdirectory(src)
 
 # target
-add_executable(test1 main.cpp)
+add_executable(test_main test/test_main.cpp)
 
 # link
-target_link_libraries(test1 leetcode)
-target_link_libraries(test1 gtest_main)
+target_link_libraries(test_main leetcode gtest_main)
 
 # test
 enable_testing()
 
-add_test(NAME example_test COMMAND test1)
+add_test(NAME google_test COMMAND test_main)
