@@ -39,6 +39,7 @@ CTestTestfile.cmake
 *.lib
 
 # Executables
+bin/
 *.exe
 *.out
 *.app
@@ -51,5 +52,3 @@ CTestTestfile.cmake
 googletest-build/
 googletest-download/
 googletest-src/
-
-

@@ -38,6 +38,7 @@ project (leetcode_solution)
 include_directories(./include)
 
 # subdirectory
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./bin)
 add_subdirectory(src)
 
 # target
