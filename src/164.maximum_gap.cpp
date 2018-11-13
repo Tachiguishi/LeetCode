@@ -37,4 +37,3 @@ int Solution::maximumGap(vector<int>& nums){
 
 	return res;
 }
-

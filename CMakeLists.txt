@@ -1,5 +1,10 @@
 cmake_minimum_required (VERSION 3.0)
 
+# build flags
+set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+
 # Download and unpack googletest at configure time
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
@@ -38,10 +43,10 @@ project (leetcode_solution)
 include_directories(./include)
 
 # subdirectory
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./bin)
 add_subdirectory(src)
 
 # target
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./bin)
 add_executable(test_main test/test_main.cpp)
 
 # link
