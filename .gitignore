@@ -44,6 +44,8 @@ bin/
 *.out
 *.app
 
+### vscode
+.vscode
 
 ### vim
 *.swp
