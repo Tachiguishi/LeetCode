@@ -13,4 +13,7 @@ public:
 
 	// 166
 	string fractionToDecimal(int numerator, int denominator);
+
+	// 167
+	vector<int> twoSum(vector<int>& numbers, int target);
 };
