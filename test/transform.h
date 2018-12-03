@@ -58,9 +58,9 @@ string integerVectorToString(vector<int> list, int length = -1) {
 	string result;
 	for(int index = 0; index < length; index++) {
 		int number = list[index];
-		result += to_string(number) + ", ";
+		result += to_string(number) + ",";
 	}
-	return "[" + result.substr(0, result.length() - 2) + "]";
+	return "[" + result.substr(0, result.length() - 1) + "]";
 }
 
 } // end of namespace leetcode
