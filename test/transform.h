@@ -15,6 +15,13 @@ struct TwoStringOneInt{
 	str1(s1), str2(s2), int1(i){}
 };
 
+struct IntToggleString{
+	string str1;
+	int int1;
+	IntToggleString(int i, const char* str):
+	str1(str), int1(i){}
+};
+
 void trimLeftTrailingSpaces(string &input) {
 	input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) {
 		return !isspace(ch);
