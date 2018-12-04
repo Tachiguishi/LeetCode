@@ -19,4 +19,7 @@ public:
 
 	// 168
 	string convertToTitle(int n);
+
+	// 169
+	int majorityElement(vector<int>& nums);
 };
