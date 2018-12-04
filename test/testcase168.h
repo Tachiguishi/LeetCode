@@ -18,5 +18,7 @@ TEST_P(ExecelSheetColTitle168, test1){
 INSTANTIATE_TEST_CASE_P(leetcode, ExecelSheetColTitle168,
 	::testing::Values(IntToggleString(1, "A"),
 		IntToggleString(28, "AB"),
-		IntToggleString(701, "ZY")
+		IntToggleString(52, "AZ"),
+		IntToggleString(701, "ZY"),
+		IntToggleString(704, "AAB")
 	));
