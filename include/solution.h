@@ -23,6 +23,9 @@ public:
 
 	// 169
 	int majorityElement(vector<int>& nums);
+
+	// 171
+	int titleToNumber(string s);
 };
 
 // 170
