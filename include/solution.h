@@ -24,3 +24,19 @@ public:
 	// 169
 	int majorityElement(vector<int>& nums);
 };
+
+// 170
+class TwoSum {
+public:
+	/** Initialize your data structure here. */
+	TwoSum() = default;
+
+	/** Add the number to an internal data structure.. */
+	void add(int number);
+
+	/** Find if there exists any pair of numbers which sum is equal to the value. */
+	bool find(int value);
+
+private:
+	vector<int> m_nums;
+};
