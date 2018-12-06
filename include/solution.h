@@ -6,6 +6,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 172
+	int trailingZeroes(int n);
+
 	// 164
 	int maximumGap(vector<int>& nmus);
 
