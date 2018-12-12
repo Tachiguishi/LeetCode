@@ -2,6 +2,8 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <queue>
+#include <struct_define.h>
 
 using namespace std;
 
@@ -20,6 +22,13 @@ struct IntToggleString{
 	int int1;
 	IntToggleString(int i, const char* str):
 	str1(str), int1(i){}
+};
+
+struct TwoString{
+	string str1;
+	string str2;
+	TwoString(const char* s1, const char* s2):
+	str1(s1), str2(s2){}
 };
 
 void trimLeftTrailingSpaces(string &input) {
@@ -51,6 +60,52 @@ vector<int> stringToIntegerVector(string input) {
 
 int stringToInteger(string input) {
 	return stoi(input);
+}
+
+TreeNode* stringToTreeNode(string input) {
+    trimLeftTrailingSpaces(input);
+    trimRightTrailingSpaces(input);
+    input = input.substr(1, input.length() - 2);
+    if (!input.size()) {
+        return nullptr;
+    }
+
+    string item;
+    stringstream ss;
+    ss.str(input);
+
+    getline(ss, item, ',');
+    TreeNode* root = new TreeNode(stoi(item));
+    queue<TreeNode*> nodeQueue;
+    nodeQueue.push(root);
+
+    while (true) {
+        TreeNode* node = nodeQueue.front();
+        nodeQueue.pop();
+
+        if (!getline(ss, item, ',')) {
+            break;
+        }
+
+        trimLeftTrailingSpaces(item);
+        if (item != "null") {
+            int leftNumber = stoi(item);
+            node->left = new TreeNode(leftNumber);
+            nodeQueue.push(node->left);
+        }
+
+        if (!getline(ss, item, ',')) {
+            break;
+        }
+
+        trimLeftTrailingSpaces(item);
+        if (item != "null") {
+            int rightNumber = stoi(item);
+            node->right = new TreeNode(rightNumber);
+            nodeQueue.push(node->right);
+        }
+    }
+    return root;
 }
 
 string integerVectorToString(vector<int> list, int length = -1) {

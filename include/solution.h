@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <struct_define.h>
 
 using namespace std;
 
@@ -29,6 +30,18 @@ public:
 
 	// 171
 	int titleToNumber(string s);
+};
+
+// 173
+class BSTIterator{
+public:
+	BSTIterator(TreeNode *root);
+
+	/** @return whether we have a next smallest number */
+	bool hasNext();
+
+	/** @return the next smallest number */
+	int next();
 };
 
 // 170
