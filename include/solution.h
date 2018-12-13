@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <stack>
 #include <struct_define.h>
 
 using namespace std;
@@ -42,6 +43,9 @@ public:
 
 	/** @return the next smallest number */
 	int next();
+
+private:
+	stack<TreeNode*> m_leftNodes;
 };
 
 // 170
