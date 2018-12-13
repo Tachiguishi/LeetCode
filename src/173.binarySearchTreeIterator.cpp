@@ -1,5 +1,4 @@
 #include <solution.h>
-#include <stack>
 
 BSTIterator::BSTIterator(TreeNode *root){
 	while(nullptr != root){

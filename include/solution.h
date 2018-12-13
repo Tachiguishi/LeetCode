@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 174
+	int calculateMinimumHP(vector<vector<int>>& dungeon);
+
 	// 172
 	int trailingZeroes(int n);
 
