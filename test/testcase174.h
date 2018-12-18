@@ -18,5 +18,7 @@ TEST_P(DungeonGame174, test1){
 }
 
 INSTANTIATE_TEST_CASE_P(leetcode, DungeonGame174,
-	::testing::Values(IntToggleString(7, "[[-2,-3,3].[-5,-10,1].[10,30,-5]]")
+	::testing::Values(IntToggleString(7, "[[-2,-3,3].[-5,-10,1].[10,30,-5]]"),
+		IntToggleString(1, "[[3,-20,30].[-3,4,0]]"),
+		IntToggleString(3, "[[1,-3,3].[0,-2,0].[-3,-3,-3]]")
 	));
