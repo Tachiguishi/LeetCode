@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 179
+	string largestNumber(vector<int>& nums);
+
 	// 174
 	int calculateMinimumHP(vector<vector<int>>& dungeon);
 
