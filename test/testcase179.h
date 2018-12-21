@@ -13,8 +13,8 @@ TEST_P(LargestNumber179, test1){
 	vector<int> input;
 	input = stringToIntegerVector(args.str1);
 	Solution sol;
-	string output = sol.largestNumber(input);
-	EXPECT_EQ(output, args.str2) << "input: " << args.str1;
+	string strRes = sol.largestNumber(input);
+	EXPECT_STREQ(strRes.c_str(), args.str2.c_str()) << "input: " << args.str1;
 }
 
 INSTANTIATE_TEST_CASE_P(leetcode, LargestNumber179,
