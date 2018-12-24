@@ -19,5 +19,5 @@ TEST_P(LargestNumber179, test1){
 
 INSTANTIATE_TEST_CASE_P(leetcode, LargestNumber179,
 	::testing::Values(TwoString("[10,2]", "210"),
-		TwoString("[3,30,34,5,9]", "9534330")
+		TwoString("[3,30,34,9,5]", "9534330")
 	));
