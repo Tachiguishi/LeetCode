@@ -1,20 +1,6 @@
 #include <solution.h>
 #include <algorithm>
 
-bool numCompl(const string& lhs, const string& rhs){
-	size_t l = 0;
-	size_t r = 0;
-	while(l < lhs.size() && r < rhs.size()){
-		if(lhs[l] > rhs[r]) return true;
-		if(lhs[l] < rhs[r]) return false;
-		++l, ++r;
-		if(l >= lhs.size() && r >= rhs.size()) return true;
-		if(l >= lhs.size()) l = lhs.size() - 1;
-		if(r >= rhs.size()) r = rhs.size() - 1; 
-	}
-	return false;
-}
-
 string Solution::largestNumber(vector<int>& nums){
 	vector<string> numstr;
 	for(auto i : nums){
@@ -30,7 +16,11 @@ string Solution::largestNumber(vector<int>& nums){
 		}
 		numstr.push_back(s);
 	}
-	sort(numstr.begin(), numstr.end(), numCompl);
+	sort(numstr.begin(), numstr.end(), [](string& lhs, string& rhs)->bool{
+		if(lhs[0] > rhs[0]) return true;
+		if(lhs[0] < rhs[0]) return false;
+		return lhs + rhs > rhs + lhs;
+	});
 	if(numstr[0][0] == '0') return "0";
 	string res;
 	res.clear();
