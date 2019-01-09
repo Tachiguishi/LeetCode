@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 186
+	void reverseWords(vector<char>& str);
+
 	// 179
 	string largestNumber(vector<int>& nums);
 
