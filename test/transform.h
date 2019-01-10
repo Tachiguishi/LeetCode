@@ -172,4 +172,20 @@ string charVectorToString(vector<char> list, int length = -1){
 	return "[" + result.substr(0, result.length() - 1) + "]";
 }
 
+string stringVectorToString(vector<string> list, int length = -1){
+	if(length == -1){
+		length = list.size();
+	}
+
+	if(length == 0){
+		return "[]";
+	}
+
+	string result;
+	for(int index = 0; index < length; ++index){
+		result += list[index] + ",";
+	}
+	return "[" + result.substr(0, result.length() - 1) + "]";
+}
+
 } // end of namespace leetcode

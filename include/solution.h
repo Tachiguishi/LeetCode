@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 187
+	vector<string> findRepeatedDnaSequences(string s);
+
 	// 186
 	void reverseWords(vector<char>& str);
 
