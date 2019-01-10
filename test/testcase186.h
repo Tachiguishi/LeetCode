@@ -18,5 +18,6 @@ TEST_P(BSTIterator173, test1){
 }
 
 INSTANTIATE_TEST_CASE_P(leetcode, BSTIterator173,
-	::testing::Values(TwoString("[t,h,e, ,s,k,y, ,i,s, ,b,l,u,e]", "[b,l,u,e, ,i,s, ,s,k,y, ,t,h,e]")
+	::testing::Values(TwoString("[t,h,e, ,s,k,y, ,i,s, ,b,l,u,e]", "[b,l,u,e, ,i,s, ,s,k,y, ,t,h,e]"),
+		TwoString("[]", "[]")
 	));
