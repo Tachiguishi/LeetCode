@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 188
+	int maxProfit(int k, vector<int>& prices);
+
 	// 187
 	vector<string> findRepeatedDnaSequences(string s);
 

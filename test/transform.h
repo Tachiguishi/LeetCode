@@ -17,6 +17,14 @@ struct TwoStringOneInt{
 	str1(s1), str2(s2), int1(i){}
 };
 
+struct OneStringTwoInt{
+	string str1;
+	int int1;
+	int int2;
+	OneStringTwoInt(const char* s1, int i, int j):
+	str1(s1), int1(i), int2(j){}
+};
+
 struct IntToggleString{
 	string str1;
 	int int1;
