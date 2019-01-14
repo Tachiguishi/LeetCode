@@ -18,5 +18,7 @@ TEST_P(RepeatedDNA187, test1){
 
 INSTANTIATE_TEST_CASE_P(leetcode, RepeatedDNA187,
 	::testing::Values(TwoString("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT", "[AAAAACCCCC,CCCCCAAAAA]"),
+		TwoString("AAAAAAAAAAA", "[AAAAAAAAAA]"),
+		TwoString("GAGAGAGAGAGAG", "[GAGAGAGAGA,AGAGAGAGAG]"),
 		TwoString("", "[]")
 	));
