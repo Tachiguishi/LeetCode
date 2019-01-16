@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 189
+	void rotate(vector<int>& nums, int k);
+
 	// 188
 	int maxProfit(int k, vector<int>& prices);
 
