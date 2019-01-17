@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 191
+	int hammingWeight(uint32_t n);
+
 	// 190
 	uint32_t reverseBits(uint32_t n);
 
