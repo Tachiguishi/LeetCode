@@ -196,4 +196,12 @@ string stringVectorToString(vector<string> list, int length = -1){
 	return "[" + result.substr(0, result.length() - 1) + "]";
 }
 
+uint32_t stringBitsToInteger(string input){
+	return 0;
+}
+
+string IntegerToStringBits(uint32_t){
+	return "";
+}
+
 } // end of namespace leetcode

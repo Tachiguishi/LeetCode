@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 190
+	uint32_t reverseBits(uint32_t n);
+
 	// 189
 	void rotate(vector<int>& nums, int k);
 
