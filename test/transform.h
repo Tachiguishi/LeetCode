@@ -197,11 +197,26 @@ string stringVectorToString(vector<string> list, int length = -1){
 }
 
 uint32_t stringBitsToInteger(string input){
-	return 0;
+	uint32_t res;
+	for(int i = input.size() - 1; i >= 0; --i){
+		if(input[i] == '1'){
+			res += (1 << (input.size() - 1 - i));
+		}
+	}
+	return res;
 }
 
-string IntegerToStringBits(uint32_t){
-	return "";
+string IntegerToStringBits(uint32_t input){
+	string res;
+	for(int i = 31; i >= 0; --i){
+		if(input & (1 << i)){
+			res.push_back('1');
+		}
+		else{
+			res.push_back('0');
+		}
+	}
+	return res;
 }
 
 } // end of namespace leetcode
