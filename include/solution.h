@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 198
+	int rob(vector<int>& nums);
+
 	// 191
 	int hammingWeight(uint32_t n);
 
