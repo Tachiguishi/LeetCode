@@ -18,6 +18,7 @@ TEST_P(HouseRobber198, test1){
 
 INSTANTIATE_TEST_CASE_P(leetcode, HouseRobber198,
 	::testing::Values(IntToggleString(4, "[1,2,3,1]"),
+		IntToggleString(20, "[1,10,1,1,10]"),
 		IntToggleString(12, "[2,7,9,3,1]")
 	));
 
