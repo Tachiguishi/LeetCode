@@ -8,6 +8,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 199
+	vector<int> rightSideView(TreeNode* root);
+
 	// 198
 	int rob(vector<int>& nums);
 
