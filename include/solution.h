@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include <stack>
+#include <queue>
 #include <struct_define.h>
 
 using namespace std;
