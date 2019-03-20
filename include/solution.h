@@ -9,6 +9,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 200
+	int numIslands(vector<vector<char>>& grid);
+
 	// 199
 	vector<int> rightSideView(TreeNode* root);
 

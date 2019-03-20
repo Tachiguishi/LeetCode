@@ -96,6 +96,21 @@ vector<vector<int>> stringTo2DIntegerVector(string input){
 	return output;
 }
 
+vector<vector<char>> stringTo2DCharVector(string input){
+	vector<vector<char>> output;
+	trimLeftTrailingSpaces(input);
+	trimRightTrailingSpaces(input);
+	input = input.substr(1, input.length() - 2);
+	stringstream ss;
+	ss.str(input);
+	string item;
+	char delim = '.';
+	while(getline(ss, item, delim)){
+		output.push_back(stringToCharVector(item));
+	}
+	return output;
+}
+
 int stringToInteger(string input) {
 	return stoi(input);
 }
