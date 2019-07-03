@@ -17,7 +17,8 @@ TEST_P(NumberIsland200, test1){
 }
 
 INSTANTIATE_TEST_CASE_P(leetcode, NumberIsland200,
-	::testing::Values(IntToggleString(1, "[[1,1,1,1,0],[1,1,0,1,0],[1,1,0,0,0],[0,0,0,0,0]]"),
-		IntToggleString(3, "[[1,1,0,0,0],[1,1,0,0,0],[0,0,1,0,0],[0,0,0,1,1]]")
+	::testing::Values(IntToggleString(1, "[[1,1,1,1,0].[1,1,0,1,0].[1,1,0,0,0].[0,0,0,0,0]]"),
+		IntToggleString(3, "[[1,1,0,0,0].[1,1,0,0,0].[0,0,1,0,0].[0,0,0,1,1]]"),
+		IntToggleString(1, "[[1,0,1,1,1].[1,0,1,0,1].[1,1,1,0,1]]")
 	));
 
