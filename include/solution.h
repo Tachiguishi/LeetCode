@@ -9,6 +9,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 201
+	int rangeBitwiseAnd(int m, int n);
+
 	// 200
 	int numIslands(vector<vector<char>>& grid);
 
