@@ -18,6 +18,11 @@ TEST_P(RangeBitwiseAnd201, test1){
 
 INSTANTIATE_TEST_CASE_P(leetcode, RangeBitwiseAnd201,
 	::testing::Values(IntToggleString(4, "[5,7]"),
-		IntToggleString(0, "[0,1]")
+		IntToggleString(1, "[1,1]"),
+		IntToggleString(4096, "[5000,5999]"),
+		IntToggleString(4992, "[5000,5022]"),
+		IntToggleString(0, "[5,8]"),
+		IntToggleString(0, "[0,1]"),
+		IntToggleString(0, "[0,2147483647]")
 	));
 
