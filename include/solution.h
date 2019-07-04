@@ -9,6 +9,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 202
+	bool isHappy(int n);
+
 	// 201
 	int rangeBitwiseAnd(int m, int n);
 
