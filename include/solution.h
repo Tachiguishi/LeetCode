@@ -10,6 +10,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 203
+	ListNode* removeElements(ListNode* head, int val);
+
 	// 202
 	bool isHappy(int n);
 
