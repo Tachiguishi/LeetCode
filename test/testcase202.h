@@ -21,6 +21,8 @@ TEST_P(HappyNumber202, test1){
 }
 
 INSTANTIATE_TEST_CASE_P(leetcode, HappyNumber202,
-	::testing::Values(BoolToggleInt(true, 19)
+	::testing::Values(BoolToggleInt(true, 19),
+		BoolToggleInt(false, 2147483647),
+		BoolToggleInt(false, -2147483648)
 	));
 
