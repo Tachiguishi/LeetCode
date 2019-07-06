@@ -267,7 +267,7 @@ string listNodeToString(ListNode* node) {
         result += to_string(node->val) + ",";
         node = node->next;
     }
-    return "[" + result.substr(0, result.length() - 2) + "]";
+    return "[" + result.substr(0, result.length() - 1) + "]";
 }
 
 } // end of namespace leetcode
