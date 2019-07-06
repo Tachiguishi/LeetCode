@@ -10,6 +10,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 204
+	int countPrimes(int n);
+
 	// 203
 	ListNode* removeElements(ListNode* head, int val);
 

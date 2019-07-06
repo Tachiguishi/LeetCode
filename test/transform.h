@@ -32,6 +32,13 @@ struct IntToggleString{
 	str1(str), int1(i){}
 };
 
+struct TwoInt{
+	int int1;
+	int int2;
+	TwoInt(int i1, int i2):
+	int1(i1), int2(i2){}
+};
+
 struct TwoString{
 	string str1;
 	string str2;
