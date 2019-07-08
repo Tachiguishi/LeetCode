@@ -22,6 +22,7 @@ TEST_P(Isomorphic205, test1){
 
 INSTANTIATE_TEST_SUITE_P(leetcode, Isomorphic205,
 	::testing::Values(TwoStringOneInt("egg", "add", 1),
+		TwoStringOneInt("ab", "aa", 0),
 		TwoStringOneInt("foo", "bar", 0),
 		TwoStringOneInt("paper", "title", 1)
 	));
