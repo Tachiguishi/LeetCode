@@ -10,6 +10,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 205
+	bool isIsomorphic(string s, string t);
+
 	// 204
 	int countPrimes(int n);
 
