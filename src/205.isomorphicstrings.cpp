@@ -1,17 +1,24 @@
 #include <solution.h>
 
 bool Solution::isIsomorphic(string s, string t){
-	set<char> dict;
+	map<char, char> dictA;
+	map<char, char> dictB;
 	for(size_t i = 0; i < s.size(); i++){
-		if(dict.count(s[i]) > 0) continue;
+		if(dictA.find(s[i]) == dictA.end()){
+			// not find s[i]
+			dictA[s[i]] = t[i];
+		}
+		else{
+			if(dictA[s[i]] != t[i]) return false;
+		}
 
-		dict.insert(s[i]);
-		char c = t[i];
-		for(size_t j = i; j < s.size(); j++){
-			if(t[j] == c){
-				t[j] = s[i];
-			}
+		if(dictB.find(t[i]) == dictB.end()){
+			dictB[t[i]] = s[i];
+		}
+		else{
+			if(dictB[t[i]] != s[i]) return false;
 		}
 	}
-	return s == t;
+
+	return true;
 }
