@@ -10,6 +10,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 206
+	ListNode* reverseList(ListNode* head);
+
 	// 205
 	bool isIsomorphic(string s, string t);
 
