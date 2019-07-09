@@ -10,6 +10,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 207
+	bool canFinish(int numCourses, vector<vector<int>>& prerequisites);
+
 	// 206
 	ListNode* reverseList(ListNode* head);
 
