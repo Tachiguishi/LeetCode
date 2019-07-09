@@ -18,5 +18,7 @@ TEST_P(ReverseLinkList206, test1){
 }
 
 INSTANTIATE_TEST_SUITE_P(leetcode, ReverseLinkList206,
-	::testing::Values(TwoString("[1,2,3,4,5]", "[5,4,3,2,1]")
+	::testing::Values(TwoString("[1,2,3,4,5]", "[5,4,3,2,1]"),
+		TwoString("[1,2]", "[2,1]"),
+		TwoString("[1]", "[1]")
 	));
