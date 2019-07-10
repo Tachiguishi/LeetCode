@@ -4,6 +4,9 @@ bool isCycle(int n, vector<bool>& visitFlag, vector<bool>& pollFlag, vector<vect
 	if(pollFlag[n]){
 		return true;
 	}
+	if(visitFlag[n]){
+		return false;
+	}
 	pollFlag[n] = true;
 	visitFlag[n] = true;
 	for(auto i : courses[n]){
