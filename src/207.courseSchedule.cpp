@@ -1,33 +1,39 @@
 #include <solution.h>
 
+bool isCycle(int n, vector<bool>& visitFlag, vector<bool>& pollFlag, vector<vector<int>> courses){
+	if(pollFlag[n]){
+		return true;
+	}
+	pollFlag[n] = true;
+	visitFlag[n] = true;
+	for(auto i : courses[n]){
+		if(isCycle(i, visitFlag, pollFlag, courses)){
+			return true;
+		}
+	}
+	pollFlag[n] = false;
+	return false;
+}
+
 bool Solution::canFinish(int numCourses, vector<vector<int>>& prerequisites){
 	if(numCourses <= 0){
 		return true;
 	}
 
-	vector<int> courses(numCourses, -1);
+	vector<vector<int>> courses(numCourses);
 	for(auto& prerequire : prerequisites){
-		for(size_t i = 1; i < prerequire.size(); i++){
-			courses[prerequire[i - 1]] = prerequire[i];
-		}
+		courses[prerequire[0]].push_back(prerequire[1]);
 	}
 
 	vector<bool> visitFlag(numCourses, false);
 	for(size_t i = 0; i < courses.size(); ++i){
-		if(visitFlag[i]){
-			continue;
+		if(courses[i].empty() || visitFlag[i]){
+			continue; 
 		}
-		visitFlag[i] = true;
 
-		size_t index = i;
 		vector<bool> pollFlag(numCourses, false);
-		while(courses[index] != -1){
-			if(pollFlag[index]){
-				return false;
-			}
-			pollFlag[index] = true;
-			index = courses[index];
-			visitFlag[index] = true;
+		if(isCycle(i, visitFlag, pollFlag, courses)){
+			return false;
 		}
 	}
 	return true;
