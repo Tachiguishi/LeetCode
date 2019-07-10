@@ -4,6 +4,7 @@
 #include <set>
 #include <stack>
 #include <queue>
+#include <list>
 #include <struct_define.h>
 
 using namespace std;

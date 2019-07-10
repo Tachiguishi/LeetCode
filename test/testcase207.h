@@ -19,5 +19,9 @@ TEST_P(CourseSchedule207, test1){
 
 INSTANTIATE_TEST_SUITE_P(leetcode, CourseSchedule207,
 	::testing::Values(OneStringTwoInt("[[1,0]]", 2, 1),
-		OneStringTwoInt("[[1,0].[0,1]]", 2, 0)
+		OneStringTwoInt("[[1,0].[1,2].[0,1]]", 3, 0),
+		OneStringTwoInt("[[1,0].[0,1]]", 2, 0),
+		OneStringTwoInt("[[0,2].[1,2]]", 3, 1),
+		OneStringTwoInt("[[0,2].[1,2].[2,3]]", 4, 1),
+		OneStringTwoInt("[[0,2].[1,2].[2,3].[3,1]]", 4, 0)
 	));
