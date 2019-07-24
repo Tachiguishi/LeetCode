@@ -126,6 +126,7 @@ class Trie{
 public:
 	/** Initialize your data structure here. */
 	Trie();
+	~Trie();
 
 	/** Inserts a word into the trie. */
 	void insert(string word);
@@ -138,5 +139,6 @@ public:
 
 private:
 	bool m_bKey = false;
-	Trie* m_children = nullptr;
+	char m_value = ' ';
+	Trie* m_pChildren = nullptr;
 };
