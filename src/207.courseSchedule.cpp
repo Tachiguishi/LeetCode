@@ -1,6 +1,6 @@
 #include <solution.h>
 
-bool isCycle(int n, vector<bool>& visitFlag, vector<bool>& pollFlag, vector<vector<int>> courses){
+bool isCycle(int n, vector<bool>& visitFlag, vector<bool>& pollFlag, vector<vector<int>>& courses){
 	if(pollFlag[n]){
 		return true;
 	}
