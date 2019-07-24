@@ -11,6 +11,9 @@ using namespace std;
 
 class Solution{
 public:
+	// 209
+	int minSubArrayLen(int s, vector<int>& nums);
+
 	// 207
 	bool canFinish(int numCourses, vector<vector<int>>& prerequisites);
 
