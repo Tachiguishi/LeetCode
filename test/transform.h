@@ -225,6 +225,36 @@ string stringVectorToString(vector<string> list, int length = -1){
 	return "[" + result.substr(0, result.length() - 1) + "]";
 }
 
+vector<string> stringToStringVector(string input){
+	vector<string> output;
+	trimLeftTrailingSpaces(input);
+	trimRightTrailingSpaces(input);
+	input = input.substr(1, input.length() - 2);
+	stringstream ss;
+	ss.str(input);
+	string item;
+	char delim = ',';
+	while(getline(ss, item, delim)){
+		output.push_back(item);
+	}
+	return output;
+}
+
+vector<vector<string>> stringTo2DStringVector(string input){
+	vector<vector<string>> output;
+	trimLeftTrailingSpaces(input);
+	trimRightTrailingSpaces(input);
+	input = input.substr(1, input.length() - 2);
+	stringstream ss;
+	ss.str(input);
+	string item;
+	char delim = ',';
+	while(getline(ss, item, delim)){
+		output.push_back(stringToStringVector(item));
+	}
+	return output;
+}
+
 uint32_t stringBitsToInteger(string input){
 	uint32_t res;
 	for(int i = input.size() - 1; i >= 0; --i){
